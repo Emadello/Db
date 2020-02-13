@@ -1,0 +1,16 @@
+{
+    "name": "emadello/db",
+    "type": "library",
+    "description": "Mysql PDO database connection",
+    "keywords": ["db","connection","cp","backend"],
+    "homepage": "https://www.emadmhossam.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emad ElShafie",
+            "email": "emad_moh@outlook.com",
+            "homepage": "https://www.emadmhossam.com",
+            "role": "Developer"
+        }
+    ]
+}
