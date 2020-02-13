@@ -1,18 +1,18 @@
 <?php
 
-namespace Emadello\Db;
+namespace Emadello;
 
-use \Emadello\Db\config;
+use Emadello\Config;
 use \PDO;
 
-class db {
+class Db {
 
   private $config;
   protected $con;
 
   function __construct() {
 
-    $this->config = new config();
+    $this->config = new Config();
 
 		// Database Connection
 		$stmt = "mysql:dbname=".$this->config::dbname.";host=".$this->config::dbhost.";port=".$this->config::dbport.";charset=utf8";

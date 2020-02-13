@@ -1,8 +1,8 @@
 <?php
 
-namespace Emadello\Db;
+namespace Emadello;
 
-class config {
+class Config {
 
 	CONST dbhost = "localhost"; // Host Name
  	CONST dbport = "3306"; //Port
