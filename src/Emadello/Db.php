@@ -20,8 +20,6 @@ class Db {
 		$this->con->exec("set names utf8");
 		$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    print_r($this->con);
-
 	}
 
 }
