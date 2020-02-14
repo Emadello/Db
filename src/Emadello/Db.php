@@ -8,7 +8,7 @@ use \PDO;
 class Db {
 
   private $config;
-  protected $con;
+  public $con;
 
   function __construct() {
 
