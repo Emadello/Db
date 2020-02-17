@@ -1,6 +1,6 @@
 {
     "name": "emadello/db",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "type": "library",
     "description": "Mysql PDO database connection",
     "keywords": ["db","connection","cp","backend"],
