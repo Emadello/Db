@@ -9,19 +9,20 @@ class Config
 {
 	protected $envFile = '/.env';
 	protected $projectPath;
-	protected $dbhost; // Host Name
-	protected $dbport; //Port
-	protected $dbuser;
-	protected $dbpass;
-	protected $dbname;
+	public $dbhost; // Host Name
+	public $dbport; //Port
+	public $dbuser;
+	public $dbpass;
+	public $dbname;
 
 	public function __construct()
-	{
-		$this->projectPath = dirname(\Composer\Factory::getComposerFile());
-		$dotenv = new DotEnv($this->projectPath.'/'.$this->envFile);
-		$dotenv->load();
-		$this->updateCreds($dotenv);
-	}
+    {
+        $reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
+        $this->projectPath = dirname($reflection->getFileName(), 3);
+        $dotenv = new DotEnv($this->projectPath.'/'.$this->envFile);
+        $dotenv->load();
+        $this->updateCreds($dotenv);
+    }
 
 	protected function updateCreds($dotenv)
 	{
