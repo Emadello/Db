@@ -3,10 +3,12 @@
 namespace Emadello;
 
 use \DevCoder\DotEnv;
+use \Composer\Factory;
 
 class Config
 {
-	const PATH_TO_ENV = __DIR__ . '/.env';
+	protected $envFile = '/.env';
+	protected $projectPath;
 	protected $dbhost; // Host Name
 	protected $dbport; //Port
 	protected $dbuser;
@@ -15,7 +17,8 @@ class Config
 
 	public function __construct()
 	{
-		$dotenv = new DotEnv(self::PATH_TO_ENV);
+		$this->projectPath = dirname(\Composer\Factory::getComposerFile());
+		$dotenv = new DotEnv($this->projectPath.'/'.$this->envFile);
 		$dotenv->load();
 		$this->updateCreds($dotenv);
 	}
