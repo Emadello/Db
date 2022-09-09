@@ -1,9 +1,14 @@
 {
     "name": "emadello/db",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "type": "library",
     "description": "Mysql PDO database connection",
-    "keywords": ["db","connection","cp","backend"],
+    "keywords": [
+        "db",
+        "connection",
+        "cp",
+        "backend"
+    ],
     "homepage": "https://www.emadmhossam.com",
     "license": "MIT",
     "authors": [
@@ -14,7 +19,16 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "devcoder-xyz/php-dotenv": "1.1.1",
+        "php": ">=7.4"
+    },
     "autoload": {
-      "psr-0": {"Emadello": "src/"}
+        "psr-0": {
+            "Emadello": "src/"
+        },
+        "psr-4": {
+            "Emadello\\": "src"
+        }
     }
 }
