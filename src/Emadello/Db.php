@@ -9,13 +9,11 @@ class Db
 {
   private $config;
   public $con;
-  protected $connected = false;
-
+  public $connected = false;
   function __construct()
   {
     $this->config = new Config();
   }
-
   public function con()
   {
     try {
@@ -26,6 +24,7 @@ class Db
         $this->con->exec("set names utf8");
         $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->connected = true;
+        if (isset($_SESSION['db_error'])) unset($_SESSION['db_error']);
       }
       return $this->con;
     } catch (\PDOException $e) {
