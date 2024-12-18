@@ -2,7 +2,7 @@
 
 namespace Emadello;
 
-use \DevCoder\DotEnv;
+use \PhpDevCommunity\DotEnv;
 use \Composer\Factory;
 
 class Config
